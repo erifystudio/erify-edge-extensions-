@@ -1,0 +1,40 @@
+name: Create ADO Work Item on New Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-ado-item:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create ADO Work Item
+        env:
+          ADO_ORG_URL: ${{ secrets.ADO_ORG_URL }}
+          ADO_PROJECT: ${{ secrets.ADO_PROJECT }}
+          ADO_PAT: ${{ secrets.ADO_PERSONAL_ACCESS_TOKEN }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          echo "Creating Azure DevOps work item with specific area path..."
+          BODY="{
+            \"fields\": {
+              \"System.Title\": \"${ISSUE_TITLE//\"/\\\"}\",
+              \"System.Description\": \"GitHub Issue: <a href='${ISSUE_URL}'>${ISSUE_URL}</a><br><br>${ISSUE_BODY//\"/\\\"}\",
+              \"System.AreaPath\": \"Edge\\Edge India\\Extensibility\"
+            }
+          }"
+          RESPONSE=$(curl -s -o response.json -w "%{http_code}" \
+            -u :$ADO_PAT \
+            -X POST \
+            -H "Content-Type: application/json" \
+            -d "$BODY" \
+            "$ADO_ORG_URL/$ADO_PROJECT/_apis/wit/workitems/\$Issue?api-version=7.0")
+          cat response.json
+          if [ "$RESPONSE" -ge 200 ] && [ "$RESPONSE" -lt 300 ]; then
+            echo "ADO work item created successfully."
+          else
+            echo "Failed to create ADO work item. Status: $RESPONSE"
+            exit 1
+          fi
