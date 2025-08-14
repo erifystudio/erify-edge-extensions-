@@ -24,7 +24,9 @@ This repo contains the following samples:
 | Picture viewer pop-up webpage | [/picture-viewer-popup-webpage/](https://github.com/microsoft/MicrosoftEdge-Extensions/tree/main/Extension-samples/picture-viewer-popup-webpage) | [Sample: Picture viewer pop-up webpage](https://learn.microsoft.com/microsoft-edge/extensions/getting-started/picture-viewer-popup-webpage) |
 | Picture inserter using content script | [/picture-inserter-content-script/](https://github.com/microsoft/MicrosoftEdge-Extensions/tree/main/Extension-samples/picture-inserter-content-script) | [Sample: Picture inserter using content script](https://learn.microsoft.com/microsoft-edge/extensions/getting-started/picture-inserter-content-script) |
 
-The files in [/TestCrxPackages/](https://github.com/microsoft/MicrosoftEdge-Extensions/tree/main/Extension-samples/TestCrxPackages) are test extension packages, and you can ignore them.
+The files in [/TestCrxPackages/](https://github.com/microsoft/MicrosoftEdge-Extensions/tree/main/TestCrxPackages/) are not sample code; they are test extension packages for testing the update feature.
+
+The files in [/assets/](https://github.com/microsoft/MicrosoftEdge-Extensions/tree/main/assets/) are (todo).
 
 See also:
 * [List of samples](https://learn.microsoft.com/microsoft-edge/extensions/samples#list-of-samples) in _Samples for Microsoft Edge extensions_.  Includes samples that are in the **MicrosoftEdge / Demos** repo.
