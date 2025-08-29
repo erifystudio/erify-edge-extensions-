@@ -1,8 +1,8 @@
 # Readme for the /TestCrxPackages/ directory
 
 Files in this directory:
-* `ciialmfkbbnfalikdcjgknhhodmpampi.crx` - for x.
-* `kgcfnkdjfpnkfhjaphlllemjbmmpdcdg.crx` - for x.
+* `ciialmfkbbnfalikdcjgknhhodmpampi.crx` - for x.  For instructions, see [todo: link]. - what's the URL for the test-instructions page?
+* `kgcfnkdjfpnkfhjaphlllemjbmmpdcdg.crx` - for x.  For instructions, see [todo: link]. - what's the URL for the test-instructions page?
 
 todo: link to testing instructions, condense this Readme.
 
