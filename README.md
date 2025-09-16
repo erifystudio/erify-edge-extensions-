@@ -19,11 +19,6 @@ Use the [Code](https://github.com/microsoft/MicrosoftEdge-Extensions/tree/main/E
 
 This repo contains the following samples:
 
-<!-- todo:
-not important: in main Readme, can have relative links to subdirs, or abs links to GitHub repo's dirs
-important: in the main Readme, link to GitHub repo at least once
-important: in each dir's Readme, link to an article about the dir's content - todo: test those links -->
-
 | Name | Folder | Article |
 | --- | --- | --- |
 | Picture viewer pop-up webpage | [/picture-viewer-popup-webpage/](./Extension-samples/picture-viewer-popup-webpage/) | [Sample: Picture viewer pop-up webpage](https://learn.microsoft.com/microsoft-edge/extensions/getting-started/picture-viewer-popup-webpage) |
